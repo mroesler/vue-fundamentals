@@ -3,6 +3,7 @@ const vm = Vue.createApp({
     return {
       firstName: 'John',
       lastName: 'Doe',
+      url: 'https://www.google.com',
       getFirstName() {
         return this.firstName;
       },
@@ -24,7 +25,7 @@ const vm = Vue.createApp({
   }
 }).mount('#app')
 
-setTimeout(() => {
+/* setTimeout(() => {
   vm.setFirstName('Bob');
   vm.setLastName('Roesler');
-}, 2000)
+}, 2000) */
