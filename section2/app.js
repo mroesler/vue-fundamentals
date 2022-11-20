@@ -23,9 +23,6 @@ const vm = Vue.createApp({
     }
   },
   methods: {
-    getFullName() {
-      return `${this.firstName} ${this.middleName} ${this.lastName.toUpperCase()}`
-    },
     increment() {
       this.age++;
     },
@@ -36,6 +33,12 @@ const vm = Vue.createApp({
     updateMiddleName(event) {
       this.middleName = event.target.value;
     }
+  },
+  computed: {
+    getFullName() {
+      console.log('Fullname computed property was called!');
+      return `${this.firstName} ${this.middleName} ${this.lastName.toUpperCase()}`
+    },
   }
 }).mount('#app')
 
